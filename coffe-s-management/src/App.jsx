@@ -1,10 +1,8 @@
-import './App.css'
-import Usuario from './Secciones/Usuario/Usuario'
-
+import Login from './components/Login'
 function App() {
 
   return (
-    <Usuario/>
+    <Login/>
   )
 }
 

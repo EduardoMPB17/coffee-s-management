@@ -24,16 +24,16 @@ const Login = () => {
                 className="absolute top-0 left-0 w-screen h-screen"
             >
                 <div>
-                    <img src="p1.jpg" alt="imagen1" style={{ width: '100%', height: '100%' }} />
+                    <img src="./public/img/p1.jpg" alt="imagen1" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div>
-                    <img src="p2.jpg" alt="Imagen 2" style={{ width: '100%', height: '100%' }} />
+                    <img src="./public/img/p2.jpg" alt="Imagen 2" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div>
-                    <img src="p3.jpg" alt="Imagen 3" style={{ width: '100%', height: '100%' }} />
+                    <img src="./public/img/p3.jpg" alt="Imagen 3" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div>
-                    <img src="p4.jpg" alt="Imagen 4" style={{ width: '100%', height: '100%' }} />
+                    <img src="./public/img/p4.jpg" alt="Imagen 4" style={{ width: '100%', height: '100%' }} />
                 </div>
             </Carousel>
 
