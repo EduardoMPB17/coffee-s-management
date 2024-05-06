@@ -1,12 +1,18 @@
 import React from 'react';
-import '../styles/Usuario.css'; 
+import Sidebar from '../components/slidebar';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 function Usuario() {
     return (
-    <div className="usuario-section">
-        <h2 className="usuario-title">Perfil de Usuario</h2>
-        <p className="usuario-content">Información personal</p>
-    </div>
+        <div className=" bg-white flex flex-col min-h-screen">
+            <Header title="¡Bienvenido Usuario!" />
+            <nav><Sidebar/></nav>
+            <main className="flex-grow">
+                {/* Cosas de Usuario */}
+            </main>
+            <Footer />
+        </div>
     );
 }
 
