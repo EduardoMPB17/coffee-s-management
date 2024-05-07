@@ -5,9 +5,9 @@ const server = http.createServer(async (req, res) => {
   const client = await connectDB();
 
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello, World!');
+  res.end('Este es el Backend');
 });
 
 server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000/');
+  console.log('El Servidor esta corriendo en: http://localhost:3000/');
 });

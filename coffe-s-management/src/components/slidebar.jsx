@@ -18,7 +18,7 @@ const Sidebar = (props) => {
         <ul className="pl-4">
           <li>
             <h1 className="pl-10 rounded-tl-xl rounded-bl-xl">
-            <img src="/img/logoD.jpg" width={"100px"}></img>
+            <img src="/img/logoD.png" width={"100px"}></img>
             </h1>
 
           </li>
