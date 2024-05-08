@@ -7,6 +7,7 @@ import Inicio from './pages/Inicio'
 import Usuario from './pages/Usuario'
 import Estadistics from './pages/Estadisticas'
 import Documents from './pages/Documentos'
+import Crud from './pages/Crud'
 
 const router = createBrowserRouter([
   {//routing de pag. 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/Estadistics',
     element: <Estadistics/>
+  },
+  {
+    path: '/Inventario',
+    element: <Crud/>
   }
 
 ])

@@ -12,8 +12,7 @@ const Sidebar = (props) => {
 
   return (
     <div
-      className={`bg-[#4A3B25] fixed lg:left-0 top-0 w-30 h-full flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl z-50 `}
-    >
+      className='bg-[#4A3B25] lg:left-0 top-0 h-full fixed flex flex-col justify-between py-6' style={{ width: "300px" }}>
       <div>
         <ul className="pl-4">
           <li>

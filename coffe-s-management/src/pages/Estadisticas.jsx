@@ -1,17 +1,16 @@
 import React from 'react';
 import Sidebar from '../components/slidebar';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 
 function Estadistics() {
     return (
-        <div className=" bg-white flex flex-col min-h-screen">
-            <Header title="¡Estadísticas!" />
-            <nav><Sidebar/></nav>
-            <main className="flex-grow">
-                {/* Cosas de Estadistics */}
-            </main>
-            <Footer />
+        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '300px'}}>
+            <header className='col-start-2 bg-[#E6D88A] px-4'>
+                <h1 className='text-xl font-bold'>¡Estadísticas!</h1>
+            </header>
+            <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>
+            <main className='col-start-2'></main>
+            <div className='col-start-2'> <Footer/> </div>
         </div>
     );
 }
