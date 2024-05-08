@@ -24,7 +24,7 @@ function Crud() {
     ];
 
     return (
-        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '300px'}}>
+        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '250px'}}>
 
             <header className='col-start-2 bg-[#E6D88A] flex items-center justify-between px-4'>
                 <div className="flex items-center flex-grow p-4 gap-2 bg-[#4A3B25] rounded-md focus:outline-none">
