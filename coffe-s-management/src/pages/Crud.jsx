@@ -24,7 +24,7 @@ function Crud() {
     ];
 
     return (
-        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '250px'}}>
+        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px'}}>
 
             <header className='col-start-2 bg-[#E6D88A] flex items-center justify-between px-4'>
                 <div className="flex items-center flex-grow p-4 gap-2 bg-[#4A3B25] rounded-md focus:outline-none">
@@ -40,7 +40,7 @@ function Crud() {
             <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>
 
             <main className='col-start-2 flex-grow p-4'>
-            <table className="w-full border-collapse border border-gray-300">
+                <table className="w-full border border-gray-300">
                     <thead>
                         <tr className="bg-gray-100">
                             <th className="border border-gray-300 p-2">Código</th>
@@ -51,7 +51,6 @@ function Crud() {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* Mapeo de datos de inventario */}
                         {inventoryData.map((item) => (
                             <tr key={item.id}>
                                 <td className="border border-gray-300 p-2">{item.id}</td>

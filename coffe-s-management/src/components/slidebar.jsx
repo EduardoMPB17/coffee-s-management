@@ -9,7 +9,7 @@ const Sidebar = (props) => {
   const { showMenu } = props;
 
   return (
-    <div className='bg-[#4A3B25] h-full fixed' style={{ width: "250px" }}>
+    <div className='bg-[#4A3B25] h-full fixed rounded-r-xl z-10' style={{ width: "250px" }}>
         <ul className="flex flex-col space-y-3">
 
           <li className='flex justify-center items-center'>
