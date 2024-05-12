@@ -22,7 +22,7 @@ const productsSchema = new Schema({
     type: Date, required: true, unique: false
   },
    
-  proveedor: {
+  Descripción: {
     type: String, required: true, unique: false
   }
 });
