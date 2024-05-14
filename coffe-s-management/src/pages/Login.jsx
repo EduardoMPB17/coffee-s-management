@@ -39,7 +39,7 @@ const Login = () => {
             </Carousel>
 
             {/* Componente de inicio de sesión */}
-            <div className='w-full max-w-md bg-white rounded-[40px] border border-[#E6D88A] border-4 shadow-default py-10 px-16 relative z-10' style={{ fontFamily: 'cursive' }}>
+            <div className='w-full max-w-md bg-white rounded-[40px] border-[#E6D88A] border-4 shadow-default py-10 px-16 relative z-10' style={{ fontFamily: 'cursive' }}>
                 <h1 className='text-2xl font-medium text-primary mt-4 mb-12 text-center'>
                     Coffee Admin
                 </h1>
