@@ -52,7 +52,7 @@ const Sidebar = (props) => {
           </li>
 
           <li className="hover:bg-[#4A3B25] p-4 rounded-xl group transition-colors">
-            <Link className="group-hover:bg-[#E4E287] p-4 flex rounded-xl text-[#E4E287] group-hover:text-white transition-colors" >
+            <Link  className="group-hover:bg-[#E4E287] p-4 flex rounded-xl text-[#E4E287] group-hover:text-white transition-colors" >
               <RiLogoutCircleRLine className="text-2xl" />
               <span className="ml-2">Cerrar Sesión</span>
             </Link>

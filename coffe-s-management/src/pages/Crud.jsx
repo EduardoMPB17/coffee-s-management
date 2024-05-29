@@ -24,42 +24,42 @@ function Crud() {
     ];
 
     return (
-        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px'}}>
+        <div className='grid grid-cols-2 h-[100vh]  ' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px' }}>
 
             <header className='col-start-2 bg-[#E6D88A] flex items-center justify-between px-4'>
                 <div className="flex items-center flex-grow p-4 gap-2 bg-[#4A3B25] rounded-md focus:outline-none">
 
                     <input type="text" placeholder="Buscar..." className="flex-grow px-3 py-2 border border-[#E6D88A] text-[#E6D88A] placeholder-[#E6D88A] rounded-md focus:outline-none bg-[#4A3B25]" />
 
-                    <button className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-4 py-2 rounded-md">Agregar producto</button>
-                    <button className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-4 py-2 rounded-md">Modificar producto</button>
-                    <button className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-4 py-2 rounded-md">Eliminar producto</button>
+                    <button className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-4 py-2 rounded-lg">Agregar producto</button>
+                    <button className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-4 py-2 rounded-lg">Modificar producto</button>
+                    <button className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-4 py-2 rounded-lg">Eliminar producto</button>
                 </div>
             </header>
 
             <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>
 
             <main className='col-start-2 flex-grow p-4'>
-                <table className="w-full border border-gray-300">
+                <table className="w-full rounded-t-lg overflow-hidden  ">
                     <thead>
-                        <tr className="bg-gray-100">
-                            <th className="border border-gray-300 p-2">Código</th>
-                            <th className="border border-gray-300 p-2">Producto</th>
-                            <th className="border border-gray-300 p-2">Descripción</th>
-                            <th className="border border-gray-300 p-2">Cantidad</th>
-                            <th className="border border-gray-300 p-2">Precio</th>
-                            <th className="border border-gray-300 p-2">Categoría</th>
+                        <tr className="bg-[#E6D88A] shadow-lg">
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Código</th>
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Producto</th>
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Descripción</th>
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Cantidad</th>
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Precio</th>
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Categoría</th>
                         </tr>
                     </thead>
                     <tbody>
                         {inventoryData.map((item) => (
-                            <tr key={item.id}>
-                                <td className="border border-gray-300 p-2">{item.id}</td>
-                                <td className="border border-gray-300 p-2">{item.name}</td>
-                                <td className="border border-gray-300 p-2">{item.description}</td>
-                                <td className="border border-gray-300 p-2">{item.quantity}</td>
-                                <td className="border border-gray-300 p-2">{item.price}</td>
-                                <td className="border border-gray-300 p-2">{item.category}</td>
+                            <tr key={item.id} >
+                                <td className="border-t-0 px-6 align-middle  text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{item.id}</td>
+                                <td className="border-t-0 px-6 align-middle  text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{item.name}</td>
+                                <td className="border-t-0 px-6 align-middle  text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{item.description}</td>
+                                <td className="border-t-0 px-6 align-middle  text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{item.quantity}</td>
+                                <td className="border-t-0 px-6 align-middle  text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{item.price}</td>
+                                <td className="border-t-0 px-6 align-middle  text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">{item.category}</td>
                             </tr>
                         ))}
                     </tbody>

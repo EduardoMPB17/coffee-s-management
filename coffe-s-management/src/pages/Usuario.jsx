@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/slidebar';
 import Footer from '../components/Footer';
-
+import WelcomeBar from '../components/bar';
 function Usuario() {
 
     const userData = {
@@ -15,8 +15,8 @@ function Usuario() {
 
         <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px'}}>
 
-            <header className='col-start-2 bg-[#E6D88A] px-4'>
-                <h1 className='text-xl font-bold'>¡Bienvenido Usuario!</h1>
+            <header>
+                <WelcomeBar></WelcomeBar>
             </header>
 
             <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>

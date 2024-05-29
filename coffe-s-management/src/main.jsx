@@ -8,7 +8,9 @@ import Usuario from './pages/Usuario'
 import Estadistics from './pages/Estadisticas'
 import Documents from './pages/Documentos'
 import Crud from './pages/Crud'
-
+import Grafico from './pages/estadisticas/Grafico'
+import Ventas from './pages/estadisticas/Ventas'
+import Crecimiento from './pages/estadisticas/Crecimiento'
 const router = createBrowserRouter([
   {//routing de pag. 
     path: '/',
@@ -31,7 +33,20 @@ const router = createBrowserRouter([
   {
     path: '/Inventario',
     element: <Crud/>
+  },
+  {
+    path: '/Grafico',
+    element: <Grafico/>
+  },
+  {
+    path: '/Ventas',
+    element: <Ventas/>
+  },
+  {
+    path: '/Crecimiento',
+    element: <Crecimiento/>
   }
+
 
 ])
   // pagina.array.forEach(pagina => {
