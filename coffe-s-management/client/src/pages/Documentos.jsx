@@ -1,3 +1,4 @@
+import React from 'react';
 import Sidebar from '../components/slidebar';
 import Footer from '../components/Footer';
 
@@ -18,21 +19,21 @@ function Documents() {
                 <h1 className='text-xl font-bold'>¡Documentos!</h1>
             </header>
             <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>
-            <main className='col-start-2 flex-grow p-4'>
-                <table className="w-full">
+            <main className='col-start-2 flex-grow p-4 '>
+                <table className="w-full rounded-t-lg overflow-hidden">
                     <thead>
-                        <tr className="bg-gray-100">
-                            <th className="border border-gray-300 p-2">Nombre de documento</th>
-                            <th className="border border-gray-300 p-2">Fecha de subida</th>
-                            <th className="border border-gray-300 p-2">Categoría</th>
+                        <tr className="bg-[#E6D88A] shadow-lg">
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Nombre de documento</th>
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Fecha de subida</th>
+                            <th className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">Categoría</th>
                         </tr>
                     </thead>
                     <tbody>
                         {inventoryDoc.map((item) => (
                             <tr key={item.id}>
-                                <td className="border border-gray-300 p-2">{item.name}</td>
-                                <td className="border border-gray-300 p-2">{item.dateup}</td>
-                                <td className="border border-gray-300 p-2">{item.category}</td>
+                                <td className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">{item.name}</td>
+                                <td className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">{item.dateup}</td>
+                                <td className="px-6  text-blueGray-500 align-middle  py-3 text-xs uppercase  whitespace-nowrap font-semibold text-left">{item.category}</td>
                             </tr>
                         ))}
                     </tbody>

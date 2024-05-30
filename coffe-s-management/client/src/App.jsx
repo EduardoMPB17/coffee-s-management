@@ -9,13 +9,16 @@ import Documents from "./pages/Documentos";
 import Usuario from "./pages/Usuario";
 import Estadistics from "./pages/Estadisticas";
 import ProtectedRoute from "./ProtectedRoute";
+import Ventas from "./pages/estadisticas/Ventas";
+import Grafico from "./pages/estadisticas/Grafico";
+import Crecimiento from "./pages/estadisticas/Crecimiento";
 
 function App(){
   return(
     <AuthProvider>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element= {<h1>home page</h1>} />
+        <Route path="/" element= {<LoginPage/>} />
         <Route path="/login" element= {<LoginPage/>} />
         <Route path="/register" element= {<RegisterPage/>} />
         <Route element={<ProtectedRoute/>}>
@@ -28,6 +31,9 @@ function App(){
           <Route path="/documentos" element= {<Documents/>} />
           <Route path="/usuario" element= {<Usuario/>} />
           <Route path="/estadistics" element= {<Estadistics/>} />
+          <Route path="/Ventas" element= {<Ventas/>} />
+          <Route path="/Crecimiento" element= {<Crecimiento/>} />
+          <Route path="/Grafico" element= {<Grafico/>} />
         </Route>
       </Routes>
     </BrowserRouter>
