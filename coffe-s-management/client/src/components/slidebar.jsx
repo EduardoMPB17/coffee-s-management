@@ -5,8 +5,8 @@ import { SiPlotly } from "react-icons/si";
 
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
-
+const Sidebar = (props) => {
+  const { showMenu } = props;
 
   return (
     <div className='bg-[#4A3B25] h-full fixed rounded-r-xl z-10' style={{ width: "250px" }}>
