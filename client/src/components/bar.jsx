@@ -2,6 +2,8 @@ import React from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineInformationCircle } from "react-icons/hi2";
 import { IoMdHelpCircleOutline } from "react-icons/io";
+import { Link } from "react-router-dom";
+
 //completar usuario con BD
 const WelcomeBar = ({ username }) => {
   return (
@@ -19,17 +21,20 @@ const WelcomeBar = ({ username }) => {
         >
           <ul className="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row">
             <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0">
+              <Link to={"/Contacto"}>
               <a className="p-0 text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 active:text-black/80 lg:px-2"
-                href="#"><MdOutlineEmail className="inline-block mr-1 text-2xl" />
+                ><MdOutlineEmail className="inline-block mr-1 text-2xl" />
                 Contactanos
-                
               </a>
+              </Link>
             </li>
             <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0">
+              <Link to={"/Info"}>
               <a className="p-0 text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 active:text-black/80 lg:px-2"
                 href="#"><HiOutlineInformationCircle className="inline-block mr-1 text-2xl"></HiOutlineInformationCircle>
                 Acerca de Nosotros
               </a>
+              </Link>
             </li>
             <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 ">
               <a className="p-0 text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 active:text-black/80 lg:px-2"
