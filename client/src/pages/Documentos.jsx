@@ -23,7 +23,8 @@ function Documents() {
                 },
             });
             console.log(res.data);
-            fetchFiles(); // Fetch files after uploading a new one
+            fetchFiles();
+            e.target.reset();
         } catch (err) {
             console.error(err);
         }
