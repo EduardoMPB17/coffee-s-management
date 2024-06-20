@@ -39,9 +39,9 @@ function Documents() {
         }
     };
 
-    const handleDelete = async (id) => {
+    const handleDelete = async (filename) => {
         try {
-            await axios.delete(`/files/delete/${id}`);
+            await axios.delete(`/files/delete/${filename}`);
             //console.log(res.data);
             fetchFiles();
         } catch (err) {

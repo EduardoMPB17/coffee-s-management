@@ -26,14 +26,12 @@ const getFiles = async (req, res) => {
 };
 
 const deleteFile = async (req, res) => {
-    const file = await gfs.files.findOne({ filename: req.params.id });
+    const file = await gfs.files.findOne({ filename: req.params.filename });
+    console.log(file);
     const gsfb = new mongoose.mongo.GridFSBucket(conn.connection.db, { bucketName: 'uploads' });
-    gsfb.delete(file._id, function (err, gridStore) {
-        if (err) {
-            res.status(404).send('no file found')
-        }
-        res.status(200).send('deleted successfully')
-    });
+    gsfb.delete(file._id);
+    const getFiles = await gfs.files.find().toArray();
+    res.status(200).json(getFiles);
 };
 
 export { upload, uploadFile, getFiles, deleteFile };
