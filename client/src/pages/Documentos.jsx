@@ -50,6 +50,24 @@ function Documents() {
         }
     };
 
+    const handleDownload = async (filename) => {
+        try {
+            const res = await axios.get(`/files/download/${filename}`, {
+                responseType: 'blob',
+            });
+
+            const url = window.URL.createObjectURL(new Blob([res.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', filename);
+            document.body.appendChild(link);
+            link.click();
+            link.parentNode.removeChild(link);
+        } catch (err) {
+            console.error('Error al descargar archivo', err);
+        }
+    };
+
     useEffect(() => {
         fetchFiles();
     }, []);
@@ -83,7 +101,10 @@ function Documents() {
                                 <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700">{(file.length / 1024).toFixed(2)} KB</td>
                                 <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700">{file.contentType}</td>
                                 <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700">{new Date(file.uploadDate).toLocaleString()}</td>
-                                <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700"><button onClick={() => handleDelete(file.filename)} className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded"> Eliminar </button> </td>
+                                <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
+                                    <button onClick={() => handleDelete(file.filename)} className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded"> Eliminar </button> 
+                                    <button onClick={() => handleDownload(file.filename)} className="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded ml-2"> Descargar </button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
