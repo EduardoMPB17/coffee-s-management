@@ -76,7 +76,7 @@ function Documents() {
         <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px' }}>
             <header className='col-start-2 bg-[#E6D88A] content-center px-40'>
                 <form className='flex place-content-between items-center bg-[#4A3B25] rounded-md p-4' onSubmit={handleSubmit}>
-                    <input className='bg-[#E6D88A]' type="file" onChange={handleFileChange}/>
+                    <input className='bg-[#E6D88A] ' type="file" onChange={handleFileChange}/>
                     <button type="submit" className='bg-[#E6D88A] text-black rounded p-2'>Subir</button>
                 </form>
             </header>

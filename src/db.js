@@ -1,18 +1,27 @@
-import mongoose from "mongoose";
-import Grid from "gridfs-stream";
+import mongoose from 'mongoose';
+import Grid from 'gridfs-stream';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 let gfs;
 let conn;
 
 export const connectDB = async () => {
     try {
-        conn = await mongoose.connect('mongodb+srv://Eduardo:123@cluster0.xb1udix.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+        conn = await mongoose.connect(process.env.MONGO_URI);
+
         console.log(">> DB conectada");
 
-        gfs = Grid(conn.connection.db, mongoose.mongo);
+        // Constante 
+        const db = conn.connection.db;
+
+        // Inicializa GridFS
+        gfs = Grid(db, mongoose.mongo);
         gfs.collection('uploads');
     } catch (error) {
-        console.log(error);
+        console.error('Error connecting to MongoDB:', error.message);
+        process.exit(1);
     }
 };
 
