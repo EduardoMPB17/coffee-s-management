@@ -24,3 +24,4 @@ export const loginSchema = z.object({
         required_error: 'password required',
     }),
 });
+

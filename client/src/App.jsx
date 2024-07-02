@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import { AuthProvider } from "./context/AuthContext";
@@ -12,13 +12,15 @@ import ProtectedRoute from "./ProtectedRoute";
 import Ventas from "./pages/estadisticas/Ventas";
 import Grafico from "./pages/estadisticas/Grafico";
 import Crecimiento from "./pages/estadisticas/Crecimiento";
+import Info from "./pages/Info";
+import Contacto from "./pages/Contacto";
 
 function App(){
   return(
     <AuthProvider>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element= {<LoginPage/>} />
+        <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element= {<LoginPage/>} />
         <Route path="/register" element= {<RegisterPage/>} />
         <Route element={<ProtectedRoute/>}>
@@ -34,6 +36,9 @@ function App(){
           <Route path="/Ventas" element= {<Ventas/>} />
           <Route path="/Crecimiento" element= {<Crecimiento/>} />
           <Route path="/Grafico" element= {<Grafico/>} />
+          <Route path="/Info" element= {<Info/>} />
+          <Route path="/Contacto" element= {<Contacto/>} />
+          
         </Route>
       </Routes>
     </BrowserRouter>

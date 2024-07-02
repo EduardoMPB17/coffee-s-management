@@ -1,10 +1,28 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+import Grid from 'gridfs-stream';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+let gfs;
+let conn;
 
 export const connectDB = async () => {
-    try{
-        await mongoose.connect('mongodb://Amaro:123@ac-vgutnvs-shard-00-00.haejzuj.mongodb.net:27017,ac-vgutnvs-shard-00-01.haejzuj.mongodb.net:27017,ac-vgutnvs-shard-00-02.haejzuj.mongodb.net:27017/?ssl=true&replicaSet=atlas-wao00r-shard-0&authSource=admin&retryWrites=true&w=majority');
-        console.log(">> DB conectada")
-    }catch (error){
-        console.log(error);
+    try {
+        conn = await mongoose.connect(process.env.MONGO_URI);
+
+        console.log(">> DB conectada");
+
+        // Constante 
+        const db = conn.connection.db;
+
+        // Inicializa GridFS
+        gfs = Grid(db, mongoose.mongo);
+        gfs.collection('uploads');
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error.message);
+        process.exit(1);
     }
 };
+
+export { gfs, conn };

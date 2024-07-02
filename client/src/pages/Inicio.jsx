@@ -10,7 +10,9 @@ function Inicio() {
             </header>
             <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>
             
-            <main className='col-start-2'></main>
+            <main className='col-start-2 row-span-2 overflow-hidden '>
+                <img className='w-full h-full object-cover' src="/img/p1.jpg" alt="" />
+            </main>
             <div className='col-start-2'> <Footer/> </div>
         </div>
         );
