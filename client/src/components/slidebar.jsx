@@ -4,9 +4,11 @@ import { FaUser, FaFileArchive } from "react-icons/fa";
 import { SiPlotly } from "react-icons/si";
 
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const Sidebar = (props) => {
-  const { showMenu } = props;
+  const {logout} = useAuth();
+
 
   return (
     <div className='bg-[#4A3B25] h-full fixed rounded-r-xl z-10' style={{ width: "250px" }}>
@@ -52,7 +54,7 @@ const Sidebar = (props) => {
           </li>
 
           <li className="hover:bg-[#4A3B25] p-4 rounded-xl group transition-colors">
-            <Link  className="group-hover:bg-[#E4E287] p-4 flex rounded-xl text-[#E4E287] group-hover:text-white transition-colors" >
+            <Link  to="/" onClick={() => logout()} className="group-hover:bg-[#E4E287] p-4 flex rounded-xl text-[#E4E287] group-hover:text-white transition-colors" >
               <RiLogoutCircleRLine className="text-2xl" />
               <span className="ml-2">Cerrar Sesión</span>
             </Link>
