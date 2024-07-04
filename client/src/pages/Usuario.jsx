@@ -26,7 +26,7 @@ function Usuario() {
       </nav>
 
       <main className="col-start-2 flex justify-center items-center relative">
-        <img src='/img/uu.jpg' alt='background' className='absolute inset-0 w-full h-full object-cover object-center brightness-50' />
+        <img src='/img/p4.jpg' alt='background' className='absolute inset-0 w-full h-full object-cover object-center brightness-50' />
         <div className="mx-auto mt-2 w-1/4 relative">
           <div className="bg-white rounded-lg overflow-hidden">
             <div className="text-center p-6 bg-[#4A3B25]">
