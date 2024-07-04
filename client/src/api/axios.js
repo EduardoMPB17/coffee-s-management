@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL:"https://coffee-s-management-2.vercel.app/api",
+  baseURL:"https://localhost:5173/api",
   withCredentials: true,
 });
 

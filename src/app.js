@@ -11,7 +11,7 @@ import productRoutes from './routes/product.routes.js';
 const app = express();
 
 app.use(cors({
-    origin: 'https://coffee-s-management-2.vercel.app',
+    origin: 'https://localhost:5173',
     credentials: true
 }));
 app.use(morgan('dev'));
