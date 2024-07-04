@@ -21,7 +21,7 @@ function LoginPage() {
   });
 
   if (redirect) {
-    return <Navigate to="/inicio" />;
+    return <Navigate to="/Inicio" />;
   }
 
   return (
