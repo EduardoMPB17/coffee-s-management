@@ -6,7 +6,7 @@ import { IoMdHelpCircleOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 function WelcomeBar() {
-  const { isAuthenticated, logout, user } = useAuth();
+  const { isAuthenticated, user } = useAuth();
   console.log(isAuthenticated, user);
 
   return (
@@ -30,12 +30,6 @@ function WelcomeBar() {
                 <HiOutlineInformationCircle className="inline-block mr-1 text-2xl" />
                 Acerca de Nosotros
               </Link>
-            </li>
-            <li className="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 ">
-              <a className="p-0 text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 active:text-black/80 lg:px-2" href="#">
-                <IoMdHelpCircleOutline className="inline-block mr-1 text-2xl" />
-                Tienes un Problema?
-              </a>
             </li>
           </ul>
           <span className="ms-2 text-black/60 text-2xl">
