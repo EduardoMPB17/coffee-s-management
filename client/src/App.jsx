@@ -23,6 +23,8 @@ function App(){
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element= {<LoginPage/>} />
         <Route path="/register" element= {<RegisterPage/>} />
+        <Route path="/Info" element= {<Info/>} />
+        <Route path="/Contacto" element= {<Contacto/>} />
         <Route element={<ProtectedRoute/>}>
           <Route path="/tasks" element= {<h1>tasks page</h1>} />
           <Route path="/add-task" element= {<h1>new task</h1>} />
@@ -36,8 +38,7 @@ function App(){
           <Route path="/Ventas" element= {<Ventas/>} />
           <Route path="/Crecimiento" element= {<Crecimiento/>} />
           <Route path="/Grafico" element= {<Grafico/>} />
-          <Route path="/Info" element= {<Info/>} />
-          <Route path="/Contacto" element= {<Contacto/>} />
+
           
         </Route>
       </Routes>

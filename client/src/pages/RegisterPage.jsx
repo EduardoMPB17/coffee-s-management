@@ -68,7 +68,7 @@ function RegisterPage() {
       </Carousel>
 
       <div
-        className="w-full max-w-md bg-white rounded-[40px] border-[#E6D88A] border-4 shadow-default py-10 px-16 relative z-10"
+        className="w-full max-w-md bg-white rounded-[40px]  shadow-default py-10 px-16 relative z-10"
         style={{ fontFamily: "cursive" }}
       >
         {RegisterErrors.map((error, i) => (
@@ -84,40 +84,39 @@ function RegisterPage() {
           <input
             type="text"
             {...register("username", { required: true })}
-            className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4 text-black"
+            className="w-full p-2 mb-6 text-black border-b-2 border-[#E6D88A] outline-none focus:bg-gray-300"
             placeholder="Nombre de usuario"
           />
           {errors.username && (
-            <p className="text-red-500 ">Username is required</p>
+            <p className="text-red-500 ">Nombre de Usuario Requerido</p>
           )}
 
           <input
             type="email"
             {...register("email", { required: true })}
-            className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4 text-black"
+            className="w-full p-2 mb-6 text-black border-b-2 border-[#E6D88A] outline-none focus:bg-gray-300"
             placeholder="Email"
           />
-          {errors.email && <p className="text-red-500 ">Email is required</p>}
+          {errors.email && <p className="text-red-500 ">Email Requerido</p>}
 
           <input
             type="password"
             {...register("password", { required: true })}
-            className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4 text-black"
+            className="w-full p-2 mb-6 text-black border-b-2 border-[#E6D88A] outline-none focus:bg-gray-300"
             placeholder="Contraseña"
           />
           {errors.password && (
-            <p className="text-red-500 ">Password is required</p>
+            <p className="text-red-500 ">Contraseña Requerida</p>
           )}
           <button
-            className={`bg-[#4A3B25] py-4 px-6 text-sm text-white rounded-[20px] border border-red focus:outline-none focus:border-green-dark`}
+            className={"bg-[#4A3B25] w-full  hover:bg-[#E6D88A]   text-white font-bold py-2 px-4 mb-6 rounded-[20px]"}
             type="submit"
           >
             Registrarse
           </button>
         </form>
         <p className="flex gap-x-2 justify-between">
-          ¿tiene una cuenta?
-          <Link to="/login" className="text-sky-500">
+          <Link to="/login" className="text-lg text-[#4A3B25] hover:text-indigo-700 text-sm">Ya tienes una cuenta?
             Login
           </Link>
         </p>

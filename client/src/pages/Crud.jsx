@@ -3,7 +3,6 @@ import Sidebar from '../components/slidebar';
 import Footer from '../components/Footer';
 import Modal from 'react-modal';
 import axios from '../api/axios';
-import '../styles/Crud.css'; // Asegúrate de importar tu archivo CSS
 
 const customModalStyles = {
     content: {
@@ -113,8 +112,8 @@ function Crud() {
     };
 
     return (
-        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px' }}>
-            <header className='col-start-2 bg-[#E6D88A] flex items-center justify-between px-4'>
+        <div className="grid grid-cols-2 h-[100vh]" style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px' }}>
+            <header className="col-start-2 bg-[#E6D88A] flex items-center justify-between px-4">
                 <div className="flex items-center flex-grow p-4 gap-2 bg-[#4A3B25] rounded-md focus:outline-none">
                     <input
                         type="text"
@@ -130,9 +129,9 @@ function Crud() {
                 </div>
             </header>
 
-            <nav className='row-start-1 row-span-3'> <Sidebar /> </nav>
+            <nav className="row-start-1 row-span-3"> <Sidebar /> </nav>
 
-            <main className='col-start-2 flex-grow p-4'>
+            <main className="col-start-2 flex-grow p-4">
                 <table className="w-full rounded-t-lg overflow-hidden">
                     <thead>
                         <tr className="bg-[#E6D88A] shadow-lg">
@@ -164,7 +163,7 @@ function Crud() {
                                         </button>
                                         <button
                                             onClick={() => handleDelete(item.id)}
-                                            className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-3 py-1 rounded-lg"
+                                            className="bg-red-500 hover:bg-red-700 text-white px-3 py-1 rounded-lg"
                                         >
                                             Eliminar
                                         </button>
@@ -180,7 +179,7 @@ function Crud() {
                 </table>
             </main>
 
-            <div className='col-start-2'><Footer /></div>
+            <div className="col-start-2"><Footer /></div>
 
             <Modal
                 isOpen={isModalOpen}
@@ -197,7 +196,7 @@ function Crud() {
                             name="id"
                             value={newProduct.id}
                             onChange={handleChange}
-                            className="custom-input"
+                            className="border-2 border-black rounded px-2 py-1 my-1 w-full"
                             disabled={isEdit}
                         />
                     </div>
@@ -208,7 +207,7 @@ function Crud() {
                             name="name"
                             value={newProduct.name}
                             onChange={handleChange}
-                            className="custom-input"
+                            className="border-2 border-black rounded px-2 py-1 my-1 w-full"
                         />
                     </div>
                     <div>
@@ -218,7 +217,7 @@ function Crud() {
                             name="description"
                             value={newProduct.description}
                             onChange={handleChange}
-                            className="custom-input"
+                            className="border-2 border-black rounded px-2 py-1 my-1 w-full"
                         />
                     </div>
                     <div>
@@ -228,7 +227,7 @@ function Crud() {
                             name="quantity"
                             value={newProduct.quantity}
                             onChange={handleChange}
-                            className="custom-input"
+                            className="border-2 border-black rounded px-2 py-1 my-1 w-full"
                         />
                     </div>
                     <div>
@@ -238,7 +237,7 @@ function Crud() {
                             name="price"
                             value={newProduct.price}
                             onChange={handleChange}
-                            className="custom-input"
+                            className="border-2 border-black rounded px-2 py-1 my-1 w-full"
                         />
                     </div>
                     <div>
@@ -248,7 +247,7 @@ function Crud() {
                             name="category"
                             value={newProduct.category}
                             onChange={handleChange}
-                            className="custom-input"
+                            className="border-2 border-black rounded px-2 py-1 my-1 w-full"
                         />
                     </div>
                     <button type="submit" className="bg-[#E6D88A] hover:bg-[#e0cd63] text-[#4A3B25] px-3 py-1 rounded-lg">
