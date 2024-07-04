@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 import { useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import WelcomeBar from "../components/barLogin";
+import Footer from "../components/Footer";
 
 function RegisterPage() {
   const {
@@ -23,7 +25,9 @@ function RegisterPage() {
     signup(values);
   });
   return (
-    <div className="h-screen flex items-center justify-center relative overflow-hidden">
+    <div className="flex flex-col min-h-screen overflow-hidden">
+    <header><WelcomeBar></WelcomeBar></header>
+    <div className="flex-1 flex items-center justify-center relative overflow-hidden">
       {/* Carrusel de img */}
       <Carousel
         autoPlay
@@ -118,6 +122,8 @@ function RegisterPage() {
           </Link>
         </p>
       </div>
+    </div>
+    <footer className="mt-auto"><Footer></Footer></footer>
     </div>
   );
 }

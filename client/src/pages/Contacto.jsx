@@ -1,56 +1,58 @@
-import React from 'react';
-import Sidebar from '../components/slidebar';
-import Footer from '../components/Footer';
-import WelcomeBar from '../components/bar';
-import {Link} from 'react-router-dom';
-function Contacto() {
+    import React from 'react';
+    import Sidebar from '../components/slidebar';
+    import Footer from '../components/Footer';
+    import WelcomeBar from '../components/bar';
+    import { Link } from 'react-router-dom';
 
-    return (
-        <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '80px auto 60px', gridTemplateColumns: '240px'}}>
-            <header>
-                <WelcomeBar></WelcomeBar>
-            </header>
-            <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>
-            <main className='col-start-2 flex justify-center items-center relative'>
-                <img src='/img/p1.jpg' alt='background' className='absolute inset-0 w-full h-full object-cover object-center ' />
-                <div className="absolute inset-0 h-full w-full bg-black/50"></div>
-                <div className="container mx-auto w-2/6">
-                <div className="py-12 flex justify-center rounded-xl border border-white bg-white shadow-md shadow-black/5 saturate-200">
-                    <div className="my-8 grid gap-6 px-2">
-                    <div className="flex items-center gap-4">
-                        <p className="block antialiased font-sans text-base leading-relaxed text-inherit font-bold">lautARO</p>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <p className="block antialiased font-sans text-base leading-relaxed text-inherit font-bold">123457</p>
-                    </div>
-                    <div className="flex items-center gap-4">
-                        <p className="block antialiased font-sans text-base leading-relaxed text-inherit font-bold">CORREo</p>
-                    </div>
-                    </div>
-                    <div className="py-4 pl-24">
-                    <form action="#">
-                        <p>Contactanos</p>
-                        <div className="mb-4">
-                        <div className="relative w-full min-w-[200px] h-11 !min-w-full border-black"><input type="text" name="Name" className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50  border-t-transparent focus:border-t-transparent placeholder:opacity-0 focus:placeholder:opacity-100 text-sm px-3 py-3 rounded-md border-blue-gray-200 focus:border-gray-900" placeholder="Ingresa tu Nombre" /></div>
+    function Contacto() {
+        return (
+            <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '80px auto 60px', gridTemplateColumns: '240px' }}>
+                <header>
+                    <WelcomeBar />
+                </header>
+                <nav className='row-start-1 row-span-3'> <Sidebar /> </nav>
+                <main className='col-start-2 flex justify-center items-center relative'>
+                    <img src='/img/p1.jpg' alt='background' className='absolute inset-0 w-full h-full object-cover object-center ' />
+                    <div className="min-h-screen bg-gray-800 py-6 flex flex-col justify-center sm:py-8">
+                        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+                            <div className="absolute inset-0 bg-gradient-to-r bg-[#E6D88A] shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+                            </div>
+                            <div className=" relative px-4 py-10 bg-[#4A3B25] shadow-lg sm:rounded-3xl sm:p-20">
+                                <div className="text-center pb-6">
+                                    <h1 className="text-3xl text-gray-300">Contactanos!</h1>
+                                    <p className="text-gray-300">
+                                        LLena el Formulario de Contacto para enviarnos tu Mensaje
+                                    </p>
+                                </div>
+                                <form>
+                                    <input
+                                        className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        type="text" placeholder="Nombre" name="name" />
+                                    <input
+                                        className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        type="email" placeholder="Email" name="email" />
+                                    <input
+                                        className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        type="text" placeholder="Telefono" />
+                                    <textarea
+                                        className="shadow mb-4 min-h-0 appearance-none border rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        placeholder="Escribe tu Mensaje" name="message" style={{ height: '121px' }}></textarea>
+                                    <div className="flex justify-between">
+                                        <input
+                                            className="shadow bg-[#E6D88A]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                            type="submit" value="Enviar ➤" />
+                                        <input
+                                            className="shadow bg-[#E6D88A]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                            type="reseT" />
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div className="mb-4">
-                        <div className="relative w-full min-w-[200px] h-11 !min-w-full"><input type="email" name="Email" className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50  border-t-transparent focus:border-t-transparent placeholder:opacity-0 focus:placeholder:opacity-100 text-sm px-3 py-3 rounded-md border-blue-gray-200 focus:border-gray-900" placeholder="Ingresa tu Correo" /></div>
-                        </div>
-                        <div className="mb-4">
-                        <div className="relative w-full min-w-[200px] h-11 !min-w-full"><input type="tel" name="Phone Number" className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50  border-t-transparent focus:border-t-transparent placeholder:opacity-0 focus:placeholder:opacity-100 text-sm px-3 py-3 rounded-md border-blue-gray-200 focus:border-gray-900" placeholder=" hola" /></div>
-                        </div>
-                        <div className="mb-4">
-                        <div className="relative w-full min-w-[200px] h-11 !min-w-full"><input type="textarea" name="Message" className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50  border-t-transparent focus:border-t-transparent placeholder:opacity-0 focus:placeholder:opacity-100 text-sm px-3 py-3 rounded-md border-blue-gray-200 focus:border-gray-900" placeholder=" " /></div>
-                        </div>
-                        <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white  focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block w-full mt-6" type="button">Contact Us</button>
-                    </form>
                     </div>
-                </div>
-                </div>
-            </main>
-            <div className='col-start-2'> <Footer/> </div>
-        </div>
-    );
-}
+                </main>
+                <div className='col-start-2'> <Footer /> </div>
+            </div>
+        );
+    }
 
-export default Contacto;
+    export default Contacto;
