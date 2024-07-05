@@ -4,7 +4,7 @@ import { Bar } from "react-chartjs-2";
 function BarChart({ chartData }) {
   return (
     <div className="chart-container" style={{ width: "80%" }}>
-      <h2 style={{ textAlign: "center" }}>Gráfico de Barras</h2>
+      <h2 style={{ textAlign: "center" }}>Gráficos</h2>
       <Bar
         data={chartData}
         options={{

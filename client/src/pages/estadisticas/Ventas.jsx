@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import WelcomeBar from '../../components/bar';
 import { Data } from "../../../utils/Data.js";
 import Chart, { CategoryScale } from "chart.js/auto";
-import LineChart from '../../components/LineChart.jsx';
+import PieChart from '../../components/PieChart.jsx';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -51,7 +51,7 @@ function Ventas() {
         </Link>
       </div>
       <main className='col-start-2 row-start-2 flex justify-center items-center' style={{ height: 'calc(113% - 120px)' }}>
-        <LineChart chartData={chartData} />
+        <PieChart chartData={chartData} />
       </main>
       <div className='col-start-2 row-start-3 w-full'>
         <Footer />

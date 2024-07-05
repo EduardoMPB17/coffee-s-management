@@ -4,7 +4,7 @@ import { Pie } from "react-chartjs-2";
 function PieChart({ chartData }) {
     return (
         <div className="chart-container" style={{ width: "35%" }}>
-            <h2 style={{ textAling: "center" }}>Gráfico Circular</h2>
+            <h2 style={{ textAling: "center" }}>Productos más Vendidos</h2>
             <Pie
                 data={chartData}
                 options={{

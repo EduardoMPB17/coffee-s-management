@@ -6,7 +6,7 @@ import { Data } from "../../../utils/Data.js";
 import Chart, { CategoryScale } from "chart.js/auto";
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import BarChart from '../../components/BarChart.jsx';
+import LineChart from '../../components/LineChart.jsx';
 
 Chart.register(CategoryScale);
 
@@ -50,7 +50,7 @@ function Crecimiento() {
             </Link>
           </div>
           <main className='col-start-2 row-start-2 flex justify-center items-center' style={{ height: 'calc(113% - 120px)' }}>
-            <BarChart chartData={chartData} />
+            <LineChart chartData={chartData} />
           </main>
           <div className='col-start-2 row-start-3 w-full'>
             <Footer />
