@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../../components/slidebar';
 import Footer from '../../components/Footer';
 import WelcomeBar from '../../components/bar';
-import PieChart from '../../components/PieChart';
+import BarChart from '../../components/BarChart.jsx';
 import { Data } from "../../../utils/Data.js";
 import Chart, { CategoryScale } from "chart.js/auto";
 import { Link } from 'react-router-dom';
@@ -52,7 +52,7 @@ function Grafico() {
             </Link>
           </div>
           <main className='col-start-2 row-start-2 flex justify-center items-center' style={{ height: 'calc(113% - 120px)', textAlign: "center" }}>
-            <PieChart chartData={chartData} />
+            <BarChart chartData={chartData} />
           </main>
           <div className='col-start-2 row-start-3 w-full'>
             <Footer />

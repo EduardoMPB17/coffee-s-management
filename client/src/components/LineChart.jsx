@@ -4,7 +4,7 @@ import { Line } from "react-chartjs-2";
 function LineChart({ chartData }) {
   return (
     <div className="chart-container" style={{ width: "80%" }}>
-      <h2 style={{ textAlign: "center" }}>Gráfico de Lineas</h2>
+      <h2 style={{ textAlign: "center" }}>Crecimiento</h2>
       <Line
         data={chartData}
         options={{
