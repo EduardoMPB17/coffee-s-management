@@ -96,7 +96,7 @@ function LoginPage() {
             <input
               type="password"
               {...register("password", { required: true })}
-              className="w-full p-2 mb-6 text-[#E6D88A] border-b-2 border-[#E6D88A] outline-none focus:bg-gray-300"
+              className="w-full p-2 mb-6 text-black border-b-2 border-[#E6D88A] outline-none focus:bg-gray-300"
               placeholder="Ingresa tu Contraseña"
             />
             {errors.password && (
@@ -110,7 +110,7 @@ function LoginPage() {
               Ingresar
             </button>
           </form>
-          <p className="text-[#4A3B25] hover:text-indigo-700 text-sm ">
+          <p className=" text-[#4A3B25] hover:text-indigo-700 text-sm ">
             ¿No tiene alguna cuenta?{" "}
             <Link to="/register" className="text-[#4A3B25] hover:text-indigo-700 text-sm">
               Registrarse

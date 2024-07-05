@@ -2,7 +2,6 @@ import React from "react";
 import { useAuth } from "../context/AuthContext";
 import { MdOutlineEmail } from "react-icons/md";
 import { HiOutlineInformationCircle } from "react-icons/hi";
-import { IoMdHelpCircleOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 function WelcomeBar() {
@@ -33,7 +32,8 @@ function WelcomeBar() {
             </li>
           </ul>
           <span className="ms-2 text-black/60 text-2xl">
-            Bienvenido {user.username}
+            {isAuthenticated ? <p>Bienvenido {user.username}</p> : <Link to="/"><p>Volver al Inicio</p></Link>}
+            
           </span>
         </div>
       </div>

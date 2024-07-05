@@ -11,7 +11,7 @@ function Inicio() {
             <nav className='row-start-1 row-span-3'> <Sidebar/> </nav>
             
             <main className='col-start-2 row-span-2 overflow-hidden '>
-            <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+            <div class="relative bg-gradient-to-r h-screen text-white overflow-hidden">
                 <div class="absolute inset-0">
                     <img src="https://wallpapercave.com/wp/wp11960093.jpg" alt="Background Image" class="object-cover object-center w-full h-full" />
                     <div class="absolute inset-0 bg-black opacity-50"></div>
