@@ -7,7 +7,6 @@ import taskRoutes from "./routes/task.routes.js";
 import fileRoutes from "./routes/file.routes.js"; 
 import productRoutes from './routes/product.routes.js'; 
 
-
 const app = express();
 
 app.use(cors({
@@ -17,11 +16,11 @@ app.use(cors({
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
+
+// Rutas de la API
 app.use('/api', authRoutes);
 app.use('/api', taskRoutes);
 app.use('/api/files', fileRoutes);
-
 app.use('/api', productRoutes); 
-
 
 export default app;

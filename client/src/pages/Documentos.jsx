@@ -4,13 +4,15 @@ import Footer from '../components/Footer';
 import axios from '../api/axios';
 
 function Documents() {
-    const [file, setFile] = useState(null);
-    const [filesList, setFilesList] = useState([]);
+    const [file, setFile] = useState(null); // Estado para el archivo seleccionado
+    const [filesList, setFilesList] = useState([]); // Estado para la lista de archivos
 
+    // Maneja el cambio del input de archivo
     const handleFileChange = (e) => {
         setFile(e.target.files[0]);
     };
 
+    // Maneja el envío del formulario para subir el archivo
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData();
@@ -30,6 +32,7 @@ function Documents() {
         }
     };
 
+    // Función para obtener la lista de archivos
     const fetchFiles = async () => {
         try {
             const res = await axios.get('/files/list');
@@ -40,16 +43,17 @@ function Documents() {
         }
     };
 
+    // Función para eliminar un archivo
     const handleDelete = async (filename) => {
         try {
             await axios.delete(`/files/delete/${filename}`);
-            //console.log(res.data);
             fetchFiles();
         } catch (err) {
             console.error(err);
         }
     };
 
+    // Función para descargar un archivo
     const handleDownload = async (filename) => {
         try {
             const res = await axios.get(`/files/download/${filename}`, {
@@ -68,6 +72,7 @@ function Documents() {
         }
     };
 
+    // Efecto para obtener la lista de archivos al montar el componente
     useEffect(() => {
         fetchFiles();
     }, []);
@@ -76,7 +81,7 @@ function Documents() {
         <div className='grid grid-cols-2 h-[100vh]' style={{ gridTemplateRows: '120px auto 60px', gridTemplateColumns: '240px' }}>
             <header className='col-start-2 bg-[#E6D88A] content-center px-40'>
                 <form className='flex place-content-between items-center bg-[#4A3B25] rounded-md p-4' onSubmit={handleSubmit}>
-                    <input className='bg-[#E6D88A] ' type="file" onChange={handleFileChange}/>
+                    <input className='bg-[#E6D88A]' type="file" onChange={handleFileChange}/>
                     <button type="submit" className='bg-[#E6D88A] text-black rounded p-2'>Subir</button>
                 </form>
             </header>
@@ -102,8 +107,8 @@ function Documents() {
                                 <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700">{file.contentType}</td>
                                 <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700">{new Date(file.uploadDate).toLocaleString()}</td>
                                 <td className="border-t-0 px-6 align-middle text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
-                                    <button onClick={() => handleDelete(file.filename)} className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded"> Eliminar </button> 
-                                    <button onClick={() => handleDownload(file.filename)} className="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded ml-2"> Descargar </button>
+                                    <button onClick={() => handleDelete(file.filename)} className="bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded">Eliminar</button>
+                                    <button onClick={() => handleDownload(file.filename)} className="bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded ml-2">Descargar</button>
                                 </td>
                             </tr>
                         ))}

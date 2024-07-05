@@ -2,11 +2,11 @@ import multer from 'multer';
 import storage from '../libs/gridFsStorage.js';
 import stream from 'stream';
 import { gfs, conn } from '../db.js';
-
 import mongoose from "mongoose";
 
 const upload = multer({ storage });
 
+// Controlador para subir un archivo
 const uploadFile = (req, res) => {
     if (!req.file) {
         return res.status(400).send('Archivo no subido');
@@ -14,18 +14,20 @@ const uploadFile = (req, res) => {
     res.json({ file: req.file });
 };
 
+// Controlador para obtener la lista de archivos
 const getFiles = async (req, res) => {
     const files = await gfs.files.find().toArray();
 
     if (!files || files.length === 0) {
         return res.status(404).json({
-            message: 'Archivos no encontrado',
+            message: 'Archivos no encontrados',
         });
     }
 
     res.json(files);
 };
 
+// Controlador para eliminar un archivo
 const deleteFile = async (req, res) => {
     const file = await gfs.files.findOne({ filename: req.params.filename });
     console.log("Archivo encontrado: ", file);
@@ -37,7 +39,7 @@ const deleteFile = async (req, res) => {
     res.status(200).json(getFiles);
 };
 
-
+// Controlador para descargar un archivo
 const downloadFile = async (req, res) => {
     try {
         const file = await gfs.files.findOne({ filename: req.params.filename });
